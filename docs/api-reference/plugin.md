@@ -14,19 +14,19 @@ The plugin step is an object that contains the following properties:
   - `Update` - Represents an update operation.
   - `Delete` - Represents a delete operation.
 - `stage` - Enum `ExecutionStage`. Possible values are:
-  - `PreOperation` - Represents a pre operation stage.
-  - `PostOperation` - Represents a post operation stage.
-- `attributes` - The attributes to filter the plugin and run only for specific attributes modified or created, if empty array then it will run for all attributes.
+  - `PreOperation` - Represents a pre-operation stage.
+  - `PostOperation` - Represents a post-operation stage.
+- `attributes` - The attributes to filter the plugin and run only for specific attributes modified or created. If empty, it will run for all attributes.
 - `action` - The function that will run when the plugin is triggered.
 
-### Plugin Action Paramters Context
+### Plugin Action Parameters Context
 
 The plugin context is an object that contains the following properties:
 
 - `data` - The data that is being processed.
 - `logicalName` - The logical name of the entity.
-- `id` - The id of the entity. (Pre operation of create will not have id)
+- `id` - The ID of the entity. (Pre-operation of create will not have an ID)
 - `changedValues` - The changed values of the entity.
-- `snapshot` - The snapshot of record in db.
-- `sdkContext` - The sdk context.
-- `dbContext` - The db context.
+- `snapshot` - The snapshot of the record in the database.
+- `sdkContext` - The SDK context.
+- `dbContext` - The database context.
