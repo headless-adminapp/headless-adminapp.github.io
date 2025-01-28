@@ -30,3 +30,17 @@ The plugin context is an object that contains the following properties:
 - `snapshot` - The snapshot of the record in the database.
 - `sdkContext` - The SDK context.
 - `dbContext` - The database context.
+
+#### Tips for MongoDb
+
+`dbContext` have `session` property which required to passed in every operation to maintain the transaction.
+
+```ts
+const taskModel = schemaStore.getSchema('tasks');
+taskModel.find({}, null, { session: context.dbContext.session });
+taskModel.findOneAndUpdate({
+  // query
+}, {
+  // update
+}, { session: context.dbContext.session });
+```
