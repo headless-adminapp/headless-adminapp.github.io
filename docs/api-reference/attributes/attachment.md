@@ -15,4 +15,4 @@ The attachment attribute is an object that extends [AttributeBase](/docs/api-ref
 | `maxSize` | The maximum size of the attachment in bytes. | No |
 | `location`| The location of the attachment. Can be `'local'` (default) or `'cloud'`. | No |
 
-> For cloud storage, you need to configure [FileService](/docs/getting-started/file-service).
+> For cloud storage, you need to configure [FileService](/docs/getting-started/configuration/client/file-service).

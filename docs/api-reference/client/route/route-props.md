@@ -8,7 +8,7 @@ The `RouteProps` object is used to pass route information to the `AppLayout` com
 
 | Name | Type | Description | Required |
 | :--- | :--- | :--- | :--- |
-| `router` | [RouterInstance]((/docs/api-reference/client/route/router-instance)) | Instance of [RouterInstance]((/docs/api-reference/client/route/router-instance)) | Yes |
+| `router` | [RouterInstance](/docs/api-reference/client/route/router-instance) | Instance of [RouterInstance](/docs/api-reference/client/route/router-instance) | Yes |
 | `pathname` | `string` | The pathname. | Yes |
 | `searchParams` | `URLSearchParams` | The search params. | Yes |
 | `basePath` | `string` | The base path. | No |
