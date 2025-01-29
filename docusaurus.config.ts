@@ -7,7 +7,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'Headless AdminApp',
   tagline: 'Build admin apps in minutes',
-  favicon: 'img/favicon.ico',
+  // favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
   url: 'https://headless-adminapp.github.io',
@@ -66,7 +66,7 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    // image: 'img/docusaurus-social-card.jpg',
     navbar: {
       title: 'Headless AdminApp',
       // logo: {
