@@ -1,3 +1,7 @@
+---
+sidebar_position: 2
+---
+
 # Form page
 
 Form page is a page that displays a form to create or edit a record of a specific entity.

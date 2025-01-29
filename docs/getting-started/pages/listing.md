@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # Listing page
 
 Listing page is a page that displays a list of records of a specific entity includes search, filter, and pagination features.
