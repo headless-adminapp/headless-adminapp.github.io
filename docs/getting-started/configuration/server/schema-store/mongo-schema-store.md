@@ -12,6 +12,7 @@ import { MongoSchemaStore } from '@headless-adminapp/server-sdk-mongo';
 export const schemaStore = new MongoSchemaStore();
 
 schemaStore.register(taskSchema);
+schemaStore.validate();
 ```
 
 # Accessing model
