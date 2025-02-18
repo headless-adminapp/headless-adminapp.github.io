@@ -53,4 +53,4 @@ const sdk: IServerSdk = new MongoServerSdk<SdkContext>({
 });
 ```
 
-API Reference: [Plugin](/docs/api-reference/plugin)
+API Reference: [Plugin](/docs/api-reference/server/plugin)

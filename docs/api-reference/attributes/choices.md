@@ -1,14 +1,14 @@
 ---
-sidebar_position: 6
+sidebar_position: 11
 ---
 
-# ChoiceAttribute
+# ChoicesAttribute
 
-The choice attribute is an object that extends [AttributeBase](/docs/api-reference/attributes/base) and contains the following properties:
+The choices attribute is an object that extends [AttributeBase](/docs/api-reference/attributes/base) and contains the following properties:
 
 | Property | Description | Required |
 |---|---|---|
-| `type` | `'choice'` | Yes |
+| `type` | `'choices'` | Yes |
 | `string` | A boolean value that indicates whether the attribute is a string. | No |
 | `number` | A boolean value that indicates whether the attribute is a number. | No |
 | `options` | The options for the attribute. | Yes |

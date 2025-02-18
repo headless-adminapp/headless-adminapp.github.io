@@ -1,14 +1,14 @@
 ---
-sidebar_position: 9
+sidebar_position: 13
 ---
 
-# AttachmentAttribute
+# AttachmentsAttribute
 
-The attachment attribute is an object that extends [AttributeBase](/docs/api-reference/attributes/base) and contains the following properties:
+The attachments attribute is an object that extends [AttributeBase](/docs/api-reference/attributes/base) and contains the following properties:
 
 | Property | Description | Required |
 |---|---|---|
-| `type` | `'attachment'` | Yes |
+| `type` | `'attachments'` | Yes |
 | `format`  | The format of the attachment. Can be `'image'`, `'video'`, `'audio'`, `'document'`, or `'any'`. | Yes |
 | `maxSize` | The maximum size of the attachment in bytes. | No |
 | `location`| The location of the attachment. Can be `'local'` (default) or `'cloud'`. | No |
