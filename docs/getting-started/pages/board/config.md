@@ -1,21 +1,9 @@
 ---
-sidebar_position: 3
+sidebar_position: 1
 ---
 
-# Board page
+# Board Configuration
 
-
-```tsx title="app/board/page.tsx"
-'use client';
-
-import { Ticket, ticketSchema } from '../config/schema/ticket';
-import { PageBoard } from '@headless-adminapp/fluent/PageBoard';
-import config from './config';
-
-export default function Page() {
-  return <PageBoard config={config} />;
-}
-```
 
 ```tsx title="app/board/RecordItem.tsx"
 interface RecordItemProps {

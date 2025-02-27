@@ -38,14 +38,7 @@ export const taskSchemaExperience = builder.defineExperience({
         },
       ],
       grid: {
-        columns: [
-          {
-            name: 'title',
-          },
-          {
-            name: 'created_at',
-          },
-        ]
+        columns: ['title', 'created_at']
       }
     }),
   }],
@@ -54,27 +47,37 @@ export const taskSchemaExperience = builder.defineExperience({
     name: 'Task Form',
     experience: builder.defineFormExperience({
       tabs: [
-        columnCount: 2,
         name: 'general',
         label: 'General',
-        tabColumns: [
-          {
-            sections: [
-              {
-                name: 'general',
-                label: 'General',
-                controls: [
-                  {
-                    type: 'standard',
-                    attributeName: 'title',
-                  },
-                ],
-              },
-            ],
-          },
-        ],
+        controls: ['title'],
       ],
     }),
-  }]
+  }],
+  useHookFn: useCustomHook, // Optional
 });
+```
+
+### Use custom hook
+
+```tsx title="useCustomHook.ts"
+import { useContextKey, useFormInstance } from '@headless-adminapp/app/dataform';
+import { useOnFieldValueChangeListener } from '@headless-adminapp/app/dataform/hooks/useOnFieldValueChangeListener';
+import { useFormManager } from '@/packages/app/dataform/hooks/useFormManager';
+
+export function useCustomHook() {
+  // Custom hook implementation
+  const contextKey = useContextKey(); // Context key change when schema, form or record change
+  const form = useFormInstance();
+  const formManager = useFormManager();
+
+  useOnFieldValueChangeListener('title', (value) => {
+    // Do something when title field value change
+  });
+
+  useEffect(() => {
+    // Control ui control and section satte
+    formManager.getControl('title')?.setHidden(true);
+    formManager.getSection('general')?.setHidden(true);
+  }, [formManager, contextKey]);
+}
 ```

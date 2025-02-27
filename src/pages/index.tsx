@@ -23,6 +23,11 @@ function HomepageHeader() {
             to="/docs/introduction">
             Documentation
           </Link>
+          <Link
+            className="button button--secondary button--lg"
+            to="https://headless-adminapp-examples.vercel.app/">
+            Demo
+          </Link>
         </div>
       </div>
     </header>
@@ -36,9 +41,9 @@ export default function Home(): ReactNode {
       title={`Hello from ${siteConfig.title}`}
       description="Description will go into a meta tag in <head />">
       <HomepageHeader />
-      {/* <main>
+      <main>
         <HomepageFeatures />
-      </main> */}
+      </main>
     </Layout>
   );
 }
