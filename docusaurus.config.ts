@@ -1,5 +1,5 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
+import { themes as prismThemes } from 'prism-react-renderer';
+import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
@@ -80,7 +80,7 @@ const config: Config = {
           position: 'left',
           label: 'Documentation',
         },
-        // {to: '/blog', label: 'Blog', position: 'left'},
+        { to: '/blog', label: 'Blogs', position: 'left' },
         {
           href: 'https://github.com/headless-adminapp/adminapp',
           label: 'GitHub',
@@ -139,19 +139,24 @@ const config: Config = {
     },
   } satisfies Preset.ThemeConfig,
 
-  headTags: process.env.NODE_ENV === "production" ? [{
-    tagName: 'script',
-    attributes: {
-      type: 'text/javascript',
-    },
-    innerHTML: `
+  headTags:
+    process.env.NODE_ENV === 'production'
+      ? [
+          {
+            tagName: 'script',
+            attributes: {
+              type: 'text/javascript',
+            },
+            innerHTML: `
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "qa9a0mcwuf");
-    `
-  }] : [],
+    `,
+          },
+        ]
+      : [],
 };
 
 export default config;
