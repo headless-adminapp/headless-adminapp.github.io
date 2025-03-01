@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkadminapp_docs=self.webpackChunkadminapp_docs||[]).push([[8121],{8070:a=>{a.exports=JSON.parse('{"tags":[{"label":"form","permalink":"/blog/tags/form","count":1},{"label":"custom","permalink":"/blog/tags/custom","count":1}]}')}}]);

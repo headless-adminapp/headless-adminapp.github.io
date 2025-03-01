@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkadminapp_docs=self.webpackChunkadminapp_docs||[]).push([[7472],{5513:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Custom Form","permalink":"/blog/custom-form","unlisted":false,"date":"2025-03-01T00:00:00.000Z"}]}')}}]);
