@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 10
 ---
 
 # Retrive Multiple Record
@@ -16,7 +16,7 @@ await dataService.retriveRecord({
   skkp,
   limit,
   sort,
-})
+});
 ```
 
 ### Example
@@ -36,14 +36,18 @@ await dataService.retriveRecord({
   },
   columns: ['title', 'description'],
   expand: {
-    'assignedTo': ['name'],
+    assignedTo: ['name'],
   },
   search: 'task1',
   skkp: 0,
   limit: 10,
-  sort: [{
-    field: 'title',
-    order: 'asc',
-  }],
-})
+  sort: [
+    {
+      field: 'title',
+      order: 'asc',
+    },
+  ],
+});
 ```
+
+This example retrieves multiple task records that match the specified filter, including the title and description fields, and expands the assignedTo relationship to include the name of the user assigned to each task. The results are sorted by title in ascending order, with a limit of 10 records per page.

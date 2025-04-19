@@ -2,13 +2,13 @@
 sidebar_position: 1
 ---
 
-# ServerSdk
-
-## ServerSdk
+# Server SDK Base
 
 The `ServerSdk` class provides an abstract base class for server-side SDK implementations. It includes methods for validating and executing various operations such as creating, updating, deleting, and retrieving records.
 
-> **Note:** This class is abstract and must be extended to implement the required methods. Currently `MongoServerSdk` and `SequelizeServerSdk` are available.
+:::info
+This is abstract class and must be extended to implement the required methods. Currently `MongoServerSdk` and `SequelizeServerSdk` are available, but you can create your own implementation based on your needs.
+:::
 
 ### Constructor
 
@@ -20,14 +20,14 @@ Creates an instance of `ServerSdk`.
 
 #### Options
 
-| Name | Type | Description | Required |
-| :--- | :--- | :--- | :--- |
-| `schemaStore` | `ISchemaStore` | The schema store. | Yes |
-| `context` | `SdkContext` | The SDK context. | No |
-| `pluginStore` | `IPluginStore` | The plugin store. | No |
-| `dataFilter` | `IDataFilter` | The data filter. | No |
-| `defaultValueProvider` | `IDefaultValueProvider` | The default value provider. | No |
-| `autoNumberProvider` | `IAutoNumberProvider` | The auto number provider. | No |
+| Name                   | Type                    | Description                 | Required |
+| :--------------------- | :---------------------- | :-------------------------- | :------- |
+| `schemaStore`          | `ISchemaStore`          | The schema store.           | Yes      |
+| `context`              | `SdkContext`            | The SDK context.            | No       |
+| `pluginStore`          | `IPluginStore`          | The plugin store.           | No       |
+| `dataFilter`           | `IDataFilter`           | The data filter.            | No       |
+| `defaultValueProvider` | `IDefaultValueProvider` | The default value provider. | No       |
+| `autoNumberProvider`   | `IAutoNumberProvider`   | The auto number provider.   | No       |
 
 ### Methods
 
@@ -41,10 +41,10 @@ Executes the operation with session management.
 
 ##### ExecuteParams
 
-| Name | Type | Description | Required |
-| :--- | :--- | :--- | :--- |
-| `type` | `ExecuteType` | The type of operation. | Yes |
-| `payload` | - | The payload based on the operation type. | Yes |
+| Name      | Type          | Description                              | Required |
+| :-------- | :------------ | :--------------------------------------- | :------- |
+| `type`    | `ExecuteType` | The type of operation.                   | Yes      |
+| `payload` | -             | The payload based on the operation type. | Yes      |
 
 #### `startSesssion`
 
@@ -141,4 +141,3 @@ protected getDependedAttributes(schema: Schema<SA>): Array<{ attributeName: stri
 ```
 
 Gets the attributes that depend on the given schema.
-

@@ -119,7 +119,14 @@ export const schema = defineSchema({
 ```ts title="data/tasks/new/config/form.ts"
 const builder = new SchemaExperienceBuilder(schema);
 
-const formExperience = builder.defineFormExperience(['title']),
+const formExperience = builder.defineFormExperience({
+  tabs: [
+    {
+      name: 'general',
+      label: 'General',
+      controls: ['title'],
+    },
+  ],
   useHookFn, // optional
   defaultValues: () => ({
     title: 'Task Title',
